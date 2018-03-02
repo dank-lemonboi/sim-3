@@ -1,0 +1,50 @@
+.login_container {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(99deg, #FF70A6, #ff9770 40%, #ffd670 73%, #e9ff70);
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+.auth_container {
+    margin: 0 auto;
+    height: 55%;
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(97deg, #FF7a6e, #ffD670);
+    box-shadow: 0 14px 28px 0 rgba(0,0,0,.25), 
+                0 10px 10px 0 rgba(0,0,0,.26);
+    border-radius: 8px;
+}
+
+.image {
+    width: 1.2em;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.login_logo_container {
+    font-weight: 700;
+    color: #f8f8f8;
+    font-size: 6rem;
+    display: flex;
+    flex-direction: column; 
+}
+
+.auth_button {
+    margin: 0 auto;
+    background: #403D39;
+    height: 45px;
+    width: 347.19px;
+    color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 4px;
+}
+
+.auth_button:hover {
+    cursor: pointer;
+}
