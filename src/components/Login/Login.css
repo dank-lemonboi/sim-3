@@ -33,7 +33,7 @@
     flex-direction: column; 
 }
 
-.auth_button {
+#auth_button {
     margin: 0 auto;
     background: #403D39;
     height: 45px;

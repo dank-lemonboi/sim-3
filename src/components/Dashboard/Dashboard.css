@@ -1,4 +1,18 @@
-.welcome_message p {
+  .welcome_message {
     height: 500px ;
     width: 150px;
+    background: #ca7373;
+    text-overflow: visible;
+}
+
+.recommended_parent {
+  float: left;
+}
+
+.cat {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top:200px;
+  left: 400px;
 }

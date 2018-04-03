@@ -10,7 +10,7 @@ export default class Login extends Component {
                 <div className='login_logo_container'> <img className='image' src={logo} alt="logo"/> Helo</div>
                 <div className='login_auth_link'>
                   <a href={process.env.REACT_APP_LOGIN}>
-                   <div className='auth_button'>Login/Register</div>
+                   <div id='auth_button'>Login/Register</div>
                   </a>
                 </div>
               </div>

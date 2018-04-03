@@ -41,13 +41,14 @@ passport.use( new Auth0Strategy({
     scope: 'openid profile'
 }, function(accessToken, refreshToken, extraParams, profile, done) {
     const db = app.get('db')
+    console.log(profile)
     db.find_user([profile.id]).then( users => {
         if(!users[0]) {
             db.create_user(profile.displayName, profile.picture, profile.id).then( newUser => {
                 done(null, newUser[0].id)
             } )
         } else {
-            done(null, user[0].id)
+            done(null, users[0].id)
         }
     })
   }
@@ -59,15 +60,15 @@ passport.serializeUser( (id, done) => {
 
 passport.deserializeUser( (id, done) => {
     app.get('db').find_session_user([id]).then( user => {
-        done(null, id)
+        done(null, user[0])
     } )
     
 } )
 
 app.get('/auth', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3009/#/dashboard',
-    failureRedirect: 'http://localhost:3009/'
+    successRedirect: 'http://localhost:3000/#/dashboard',
+    failureRedirect: 'http://localhost:3000/'
 }))
 
 

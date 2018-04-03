@@ -1,0 +1,27 @@
+.element_selector {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+
+}
+
+div > p {
+    background-color: #ce4848;
+}
+
+.disabled_button :disabled {
+
+}
+
+.disabled_button:hover:focus {
+    background: green;
+}
+
+.children {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.children p:nth-child(2) {
+    background: yellow;
+}
